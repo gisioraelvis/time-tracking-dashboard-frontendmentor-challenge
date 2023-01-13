@@ -4,138 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div class="grid-container">
-    <div class="user-card">
-      <div class="user-card-upper-section">
-        <img src="/images/image-jeremy.png" alt="">
-        <h5>Report for</h5>
-        <h2 class="username"> Jeremy Robson</h2>
-      </div>
-      <div class="periods">
-        <h3 class="period">Daily</h3>
-        <h3 class="period">Weekly</h3>
-        <h3 class="period">Monthly</h3>
-      </div>
-    </div>
-
-    <div class="task-card">
-      <div class="task-card-upper-section">
-        <img src="/images/icon-work.svg" alt="">
-      </div>
-      <div class="task-card-1">
-        <div class="task-title">
-          <h3>Work</h3>
-        </div>
-        <div class="task-current-hrs">
-          <h2>5hrs</h2>
-        </div>
-        <div class="task-previous-hrs">
-          <h4>Last week - 32hrs</h4>
+  <main>
+    <section class="card profile">
+      <div class="profile-avatar">
+        <img src="./images/image-jeremy.png" alt="Image-jeremy">
+        <div class="profile-avatar-information">
+          <span>Report for</span>
+          <h2>Jeremy Robson</h2>
         </div>
       </div>
-    </div>
-
-    <div class="task-card">
-      <div class="task-card-upper-section">
-        <img src="/images/icon-play.svg" alt="">
+      <div class="profile-times">
+        <ul>
+          <li data-period="daily" class="buttons">Daily</li>
+          <li data-period="weekly" class="buttons active">Weekly</li>
+          <li data-period="monthly" class="buttons">Monthly</li>
+        </ul>
       </div>
-      <div class="task-card-2">
-        <div class="task-title">
-          <h3>Play</h3>
-        </div>
-        <div class="task-current-hrs">
-          <h2>10hrs</h2>
-        </div>
-        <div class="task-previous-hrs">
-          <h4>Last week - 8hrs</h4>
-        </div>
-      </div>
-    </div>
-
-    <div class="task-card">
-      <div class="task-card-upper-section">
-        <img src="/images/icon-study.svg" alt="">
-      </div>
-      <div class="task-card-3">
-        <div class="task-title">
-          <h3>Study</h3>
-        </div>
-        <div class="task-current-hrs">
-          <h2>4hrs</h2>
-        </div>
-        <div class="task-previous-hrs">
-          <h4>Last week - 7hrs</h4>
+    </section>
+    <section class="grid-card">
+      <div class="card card-work">
+        <div class="card-container">
+          <div class="card-container-time">
+            <h3>Work</h3>
+            <img src="./images/icon-ellipsis.svg" alt="">
+            <span data-activity="Work" class="current-time">10hrs</span>
+            <span data-activity="Work" class="previus-time">Previus - 8hrs</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="task-card">
-      <div class="task-card-upper-section">
-        <img src="/images/icon-exercise.svg" alt="">
-      </div>
-      <div class="task-card-4">
-        <div class="task-title">
-          <h3>Exercise</h3>
-        </div>
-        <div class="task-current-hrs">
-          <h2>4hrs</h2>
-        </div>
-        <div class="task-previous-hrs">
-          <h4>Last week - 5hrs</h4>
+      <div class="card card-play">
+        <div class="card-container">
+          <div class="card-container-time">
+            <h3>Play</h3>
+            <img src="./images/icon-ellipsis.svg" alt="">
+            <span data-activity="Play" class="current-time">32hrs</span>
+            <span data-activity="Play" class="previus-time">Previus - 36hrs</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="task-card">
-      <div class="task-card-upper-section">
-        <img src="/images/icon-social.svg" alt="">
-      </div>
-      <div class="task-card-5">
-        <div class="task-title">
-          <h3>Social</h3>
-        </div>
-        <div class="task-current-hrs">
-          <h2>5hrs</h2>
-        </div>
-        <div class="task-previous-hrs">
-          <h4>Last week - 10hrs</h4>
+      <div class="card card-study">
+        <div class="card-container">
+          <div class="card-container-time">
+            <h3>Study</h3>
+            <img src="./images/icon-ellipsis.svg" alt="">
+            <span data-activity="Study" class="current-time">10hrs</span>
+            <span data-activity="Study" class="previus-time">Previus - 8hrs</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="task-card">
-      <div class="task-card-upper-section">
-        <img src="/images/icon-self-care.svg" alt="">
-      </div>
-      <div class="task-card-6">
-        <div class="task-title">
-          <h3>Self Care</h3>
-        </div>
-        <div class="task-current-hrs">
-          <h2>2hrs</h2>
-        </div>
-        <div class="task-previous-hrs">
-          <h4>Last week - 2hrs</h4>
+      <div class="card card-exercise">
+        <div class="card-container">
+          <div class="card-container-time">
+            <h3>Exercise</h3>
+            <img src="./images/icon-ellipsis.svg" alt="">
+            <span data-activity="Exercise" class="current-time">4hrs</span>
+            <span data-activity="Exercise" class="previus-time">Previus - 7hrs</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <footer>
-      <div class="attribution">
-        Challenge by <a href="https://github.com/gisioraelvis/time-tracking-dashboard-frontendmentor-challenge"
-          target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Gisiora Elvis</a>.
+      <div class="card card-social">
+        <div class="card-container">
+          <div class="card-container-time">
+            <h3>Social</h3>
+            <img src="./images/icon-ellipsis.svg" alt="">
+            <span data-activity="Social" class="current-time">4hrs</span>
+            <span data-activity="Social" class="previus-time">Previus - 5hrs</span>
+          </div>
+        </div>
       </div>
-    </footer>
+      <div class="card card-self">
+        <div class="card-container">
+          <div class="card-container-time">
+            <h3>Self Care</h3>
+            <img src="./images/icon-ellipsis.svg" alt="">
+            <span data-activity="Self Care" class="current-time">2hrs</span>
+            <span data-activity="Self Care" class="previus-time">Previus - 2hrs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
