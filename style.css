@@ -1,0 +1,225 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+
+ */
+
+:root {
+  --primary-color: hsl(246, 80%, 60%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --light-red: hsl(15, 100%, 70%);
+  --soft-blue: hsl(195, 74%, 62%);
+  --lime-green: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --soft-orange: hsl(43, 84%, 65%);
+  --font-family: "Rubik", sans-serif;
+  --font-weight: 400;
+  --font-size: 18px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  background-color: var(--very-dark-blue);
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  margin: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 10px;
+  grid-template-areas:
+    "user-card task-card-1 task-card-2 task-card-3"
+    "user-card task-card-4 task-card-5 task-card-6"
+    "footer footer footer footer";
+}
+
+.user-card {
+  grid-area: user-card;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-card-upper-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--desaturated-blue);
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.user-card-upper-section img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.user-card-upper-section h4 {
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  font-size: small;
+}
+
+.user-card-upper-section h2 {
+  text-align: start;
+  margin: 0;
+  padding: 0;
+}
+
+.user-card-upper-section .periods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 0;
+  padding: 0;
+}
+
+.task-card {
+  background-color: hsl(15, 100%, 70%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card-1 {
+  grid-area: task-card-1;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card-2 {
+  grid-area: task-card-2;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card-3 {
+  grid-area: task-card-3;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card-4 {
+  grid-area: task-card-4;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card-5 {
+  grid-area: task-card-5;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card-6 {
+  grid-area: task-card-6;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--very-dark-blue);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
